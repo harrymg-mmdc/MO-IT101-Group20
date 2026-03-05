@@ -21,8 +21,8 @@ import java.time.format.DateTimeFormatter;
 public class MOIT101_Milestone2_Group20_2T_2025_2026 {
     
     //-----[Path of CSV files]-----//
-    static final String EMPLOYEE_FILE_PATH = "/Users/harrymg/NetBeansProjects/MO-IT101_Milestone2_Group20_2T_2025_2026/resources/employee.csv"; //Employee Details CSV file path.
-    static final String ATTENDANCE_FILE_PATH = "/Users/harrymg/NetBeansProjects/MO-IT101_Milestone2_Group20_2T_2025_2026/resources/attendance.csv"; //Attendance Details CSV file path.
+    static final String EMPLOYEE_FILE_PATH = "~/path/employee.csv"; //Employee Details CSV file path.
+    static final String ATTENDANCE_FILE_PATH = "~/path/attendance.csv"; //Attendance Details CSV file path.
 
     //------[Main Method]------//
     public static void main(String[] args) {
