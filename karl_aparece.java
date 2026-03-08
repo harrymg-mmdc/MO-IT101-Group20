@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 // Author: lr.kfaparece@mmdc.mcl.edu.ph
 
-public class PayrollSystem {
+public class karl_aparece {
 
         // using scanner for Login Input of username and password
     static Scanner scanner = new Scanner(System.in);
@@ -71,7 +71,7 @@ public class PayrollSystem {
 
         // Try-with-resources automatically closes the file after reading
         try (BufferedReader br = new BufferedReader(
-                new FileReader("MotorPH_Employee Data (IT101 - H1101 - Group 20)  - Employee Details.csv"))) {
+                new FileReader("resources/employee_details.csv"))) {
 
             // Skip the header row of the CSV file
             br.readLine();
@@ -122,7 +122,7 @@ public class PayrollSystem {
 
         // Try-with-resources automatically closes the file after reading
         try (BufferedReader br = new BufferedReader(
-                new FileReader("MotorPH_Employee Data (IT101 - H1101 - Group 20)  - Attendance Record.csv"))) {
+                new FileReader("resources/attendance_record.csv"))) {
 
             // Skip the header row of the CSV file
             br.readLine();
@@ -716,5 +716,6 @@ public class PayrollSystem {
         }
     }
 }
+
 
 
