@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.lhark.mo.it101_milestone2_group20_2t_2025_2026;
+//package com.lhark.mo.it101_milestone2_group20_2t_2025_2026; - "commented" for local testing.
 
 //Import required Classes
 import java.util.Scanner;
@@ -18,11 +18,11 @@ import java.time.format.DateTimeFormatter;
  * @author harrymg
  */
 
-public class MOIT101_Milestone2_Group20_2T_2025_2026 {
+public class harry_gerts {
     
     //-----[Path of CSV files]-----//
-    static final String EMPLOYEE_FILE_PATH = "~/resources/employee_details.csv"; //Employee Details CSV file path.
-    static final String ATTENDANCE_FILE_PATH = "~/resources/attendance_record.csv"; //Attendance Details CSV file path.
+    static final String EMPLOYEE_FILE_PATH = "resources/employee_details.csv"; //Employee Details CSV file path.
+    static final String ATTENDANCE_FILE_PATH = "resources/attendance_record.csv"; //Attendance Details CSV file path.
 
     //------[Main Method]------//
     public static void main(String[] args) {
