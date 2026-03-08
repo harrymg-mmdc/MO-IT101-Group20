@@ -18,7 +18,7 @@ import java.time.format.DateTimeFormatter;
  * @author harrymg
  */
 
-public class harry_gerts {
+public class harry_gertos {
     
     //-----[Path of CSV files]-----//
     static final String EMPLOYEE_FILE_PATH = "resources/employee_details.csv"; //Employee Details CSV file path.
