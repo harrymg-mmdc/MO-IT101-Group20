@@ -1,4 +1,4 @@
-package motorphtask3to3.pkg2;
+//package motorphtask3to3.pkg2;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,13 +7,13 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class MotorPHTask3to32 {
+public class rina_mae {
 
     // -------------------------------------------------------
     // FILE PATHS — make sure these match your project folder
     // -------------------------------------------------------
-    static String empFile = "~/resources/employee_details.csv";
-    static String attFile = "~/resources/attendance_record.csv";
+    static String empFile = "resources/employee_details.csv";
+    static String attFile = "resources/attendance_record.csv";
 
     public static void main(String[] args) {
 
@@ -307,3 +307,4 @@ public class MotorPHTask3to32 {
     }
 
 }
+
