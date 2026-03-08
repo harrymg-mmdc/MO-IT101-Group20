@@ -12,8 +12,8 @@ public class MotorPHTask3to32 {
     // -------------------------------------------------------
     // FILE PATHS — make sure these match your project folder
     // -------------------------------------------------------
-    static String empFile = "MotorPH_Employee Data - Employee Details.csv";
-    static String attFile = "MotorPH_Employee Data - Attendance Record.csv";
+    static String empFile = "~/resources/employee_details.csv";
+    static String attFile = "~/resources/attendance_record.csv";
 
     public static void main(String[] args) {
 
@@ -305,4 +305,5 @@ public class MotorPHTask3to32 {
         // Cap at 8 hours max
         return Math.min(hours, 8.0);
     }
+
 }
