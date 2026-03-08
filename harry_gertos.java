@@ -101,9 +101,8 @@ public class harry_gertos {
             while ((line = br.readLine()) != null) {
                 if (line.trim().isEmpty()) continue;
                 
-                //Regex to ignore comma in quotes to avoid potential errors.
-                String cleaned = line.replaceAll("\"([^\"]*),([^\"]*)\"", "$1$2");
-                String[] column = cleaned.split(","); 
+                //Replaced with custom parser instead of regex for better parsing.
+                String[] column = parseCSVLine(line);
 
                 String employeeNumber = column[0].trim(); //Employee number is 1st cell (A1) in the EMPLOYEE_FILE_PATH CSV.
                 if (employeeNumber.equals(targetEmployeeNumber)) {
@@ -290,9 +289,8 @@ public class harry_gertos {
             while ((line = br.readLine()) != null) {
                 if (line.trim().isEmpty()) continue;
                 
-                //Regex to ignore comma in quotes to avoid potential errors.
-                String cleaned = line.replaceAll("\"([^\"]*),([^\"]*)\"", "$1$2");
-                String[] cell = cleaned.split(",");
+                //Replaced with custom parser instead of regex for better parsing.
+                String[] cell = parseCSVLine(line);
 
                 String employeeNumber = cell[0].trim(); //Employee number is 1st cell (A1) in the EMPLOYEE_FILE_PATH CSV.
                 String employeeLastName = cell[1].trim(); //Employee last name is 2nd cell (B1) in the EMPLOYEE_FILE_PATH CSV.
@@ -366,9 +364,8 @@ public class harry_gertos {
             while ((line = br.readLine()) != null) {
                 if (line.trim().isEmpty()) continue;
                 
-                //Regex to ignore comma in quotes to avoid potential errors.
-                String cleaned = line.replaceAll("\"([^\"]*),([^\"]*)\"", "$1$2");
-                String[] column = cleaned.split(",");
+                //Replaced with custom parser instead of regex for better parsing.
+                String[] column = parseCSVLine(line);
                 
                 if (column[0].trim().equals(targetEmployeeNumber)) {
                     rows.add(column);
@@ -518,6 +515,31 @@ public class harry_gertos {
         }
         return tax;
     }
+
+    //------[Method for parsing CSV lines that handles commas inside quoted fields]------//
+    //Reads each character in the line. Tracks if we are inside quotes.
+    //Splits on commas only when outside quotes. Strips quotes from values.
+    public static String[] parseCSVLine(String line) {
+        java.util.List<String> columns = new java.util.ArrayList<>();
+        boolean insideQuotes = false;
+        StringBuilder current = new StringBuilder();
+
+        for (int i = 0; i < line.length(); i++) {
+            char c = line.charAt(i);
+
+            if (c == '"') {
+                insideQuotes = !insideQuotes; //Toggle quote tracking.
+            } else if (c == ',' && !insideQuotes) {
+                columns.add(current.toString().trim()); //End of column.
+                current = new StringBuilder();
+            } else {
+                current.append(c); //Build column value.
+            }
+        }
+        columns.add(current.toString().trim()); //Add last column.
+
+        return columns.toArray(new String[0]);
+    }
     
 }
     
@@ -529,8 +551,8 @@ public class harry_gertos {
     > PhilHealth computation matrix for method "calculatePhilHealth": https://docs.google.com/spreadsheets/d/16qXxY8K-DG8sm_QHtM4gHfHCNjhliNdSvUzF2yOz-bg/view
     > PagIbig computation matrix for method "calculatePagIbig": https://docs.google.com/spreadsheets/d/1cHwE0j3xplJcubD57hZf7R0Cih-n7urqO92KFVsciPs/view
     > Tax computation matrix for method "calculateTax": https://docs.google.com/spreadsheets/d/1mWxdCuYCmTd8n3DrNVxIb912xT8dWFCsQTUc2owv2UQ/view
-    > Regular Expression/Regex for ignoring comma in quotes (java split csv): https://codemia.io/knowledge-hub/path/java_splitting_a_comma-separated_string_but_ignoring_commas_in_quotes
-                                                                              https://www.baeldung.com/java-split-string-commas
+    > Java Parser (CSV, double quotes/quotes fix): https://dev.to/sadiul_hakim/csv-quotes-explained-simply-with-java-example-5dom
+                                                   https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
     > Java File Handling reading multiple records CSV files: https://www.youtube.com/watch?v=KI_a39BeCLU
                                                              https://www.youtube.com/watch?v=-Aud0cDh-J8
     > Java Array List: https://www.youtube.com/watch?v=wsTSREgCE5E
