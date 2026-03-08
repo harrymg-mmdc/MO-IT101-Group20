@@ -259,7 +259,7 @@ public class lady_mae {
             else if (monthlyGross >= 20250) sssContribution = 922.50;
 
             // READING FROM SSS CONTRIBUTION CSV FILE
-            try (BufferedReader reader = new BufferedReader(new FileReader("Copy of SSS Contribution - SSS Contribution Schedule.csv"))) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("resources/sss_contribution.csv"))) {
 
                 reader.readLine(); //Skip header
                 String line; 
@@ -328,3 +328,4 @@ public class lady_mae {
     
 
   
+
