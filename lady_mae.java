@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package motorph_milestone2;
+//package motorph_milestone2; - "Commented" for local testing.
 
 /*
  * MotorPH Milesone 2: Payroll System
@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 
 
-public class MotorPH_Milestone2 {
+public class lady_mae {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -39,7 +39,7 @@ public class MotorPH_Milestone2 {
         //-----------------------
         // READ EMPLOYEE DETAILS
         //-----------------------
-        try (BufferedReader reader = new BufferedReader(new FileReader("MotorPH_Employee Data (IT101 - H1101 - Group 20)  - Employee Details.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("resources/employee_details.csv"))) {
             
                 reader.readLine(); // Skip Header
                 String line;
@@ -88,7 +88,7 @@ public class MotorPH_Milestone2 {
 
                 int daysInMonth = YearMonth.of(2024, month).lengthOfMonth();
 
-                try (BufferedReader reader = new BufferedReader ( new FileReader("MotorPH_Employee Data (IT101 - H1101 - Group 20)  - Attendance Record.csv"))) {
+                try (BufferedReader reader = new BufferedReader ( new FileReader("resources/attendance_record.csv"))) {
 
                     reader.readLine(); //Skip header
                     String line;
@@ -326,4 +326,5 @@ public class MotorPH_Milestone2 {
 
 
     
+
   
