@@ -61,20 +61,20 @@ public class MOIT101Group20Milestone2 {
  
         // Ask for username and password
         System.out.print("Enter your Username: ");
-        String user = scanner.nextLine().trim();
+        String userName = scanner.nextLine().trim();
  
         System.out.print("Enter your Password: ");
-        String pass = scanner.nextLine().trim();
+        String passWord = scanner.nextLine().trim();
  
         // Check if the username is valid and if the password matches.
-        if (!(user.equals("employee") || user.equals("payroll_staff")) || !pass.equals("12345")) {
+        if (!(userName.equals("employee") || userName.equals("payroll_staff")) || !passWord.equals("12345")) {
  
             System.out.println("Incorrect username and/or password.");
             return; // Exit the program if login fails.
         }
  
         // Proceed to the correct menu based on role.
-        if (user.equals("employee")) {
+        if (userName.equals("employee")) {
             employeeMenu();
         } else {
             payrollMenu();
@@ -165,7 +165,7 @@ public class MOIT101Group20Milestone2 {
             }
  
         } catch (Exception e) {
-            System.out.println("Error loading attendance.");
+            System.out.println("Error loading attendance data.");
         }
     }
  
@@ -240,7 +240,7 @@ public class MOIT101Group20Milestone2 {
  
                 if (!employees.containsKey(id)) {
  
-                    System.out.println("Employee not found.");
+                    System.out.println("Employee number does not exist.");
  
                 } else {
  
@@ -284,7 +284,7 @@ public class MOIT101Group20Milestone2 {
                 String id = scanner.nextLine();
  
                 if (!employees.containsKey(id)) {
-                    System.out.println("Employee not found.");
+                    System.out.println("Employee number does not exist.");
                 } else {
                     displayPayroll(id);
                 }
@@ -312,10 +312,10 @@ public class MOIT101Group20Milestone2 {
     // This method displays the complete payroll of one employee for June to December.
     static void displayPayroll(String id) {
  
-        String[] emp = employees.get(id);
+        String[] employee = employees.get(id);
  
         // Get the hourly rate and convert it from String to double for calculations.
-        double hourly = Double.parseDouble(emp[2]);
+        double hourly = Double.parseDouble(employee[2]);
  
         // Month names for display purposes.
         String[] months =
@@ -323,8 +323,8 @@ public class MOIT101Group20Milestone2 {
  
         System.out.println("\n==============================");
         System.out.println("Employee Number: " + id);
-        System.out.println("Employee Name: " + emp[0]);
-        System.out.println("Employee Birthday: " + emp[1]);
+        System.out.println("Employee Name: " + employee[0]);
+        System.out.println("Employee Birthday: " + employee[1]);
         System.out.println("==============================");
  
         // Loop through each month (0 = June, 6 = December).
