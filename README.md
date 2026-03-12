@@ -1,2 +1,48 @@
-# IT101 MS2 H1101 Group 20
-Milestone 2 for IT101 - Computer Programming 1 - H1101 - Group 20 (LHARK)
+# MotorPH Payroll System - MO-IT101 | H1101 | Group 20
+**Milestone 2** for IT101 - Computer Programming 1
+
+<br>
+
+## [ TEAM DETAILS ]
+
+| Member Name | Contributions |
+| :--- | :---: | 
+| Karl Aparece | Create intial project, Update Project Plan, Updated Use Case Diagram based on Mentor/IT Coach feedback | 
+| Rina Mae Falculan | Create intial project, Update Project Plan, Provided external resources/references |
+| Harry Gertos | Created Github repository, Create intial project, Update Project Plan, Updated README.md |
+| Lady Mae Tapere | Create intial project, Updated Wireframe based on Mentor/IT Coach feedback |
+
+
+<br>
+
+
+## [ PROGRAM DETAILS ]
+
+The program is a simple payroll system that is designed for 2 users: An **Employee** and a **Payroll Staff**. Both users will require authentication in order to use the program. Employee User can view their details while Payroll Staff User can either process a payroll of an Employee or process all Employees. The program is easy to use and instructions are provided for each action.
+
+<br>
+
+## [HOW TO RUN THE PROGRAM]
+
+To run the program, you can either choose any of the following:
+
+**A. Running via NETBEANS IDE:**
+1. Go to https://github.com/harrymg-mmdc/MO-IT101-Group20 and click `Code` -> `Download Zip`. Extract the Project Folder to your desired location (e.g. Desktop or Documents).
+2. Alternatively, you can run this command on your Command Prompt: `git clone https://github.com/harrymg-mmdc/MO-IT101-Group20.git`
+3. Open Netbeans IDE and click `Open Project`. Under `Look in` dropdown, choose the path/location/folder where you extracted or downloaded the Project.
+4. Click `Open Project` button then afterwards, click the `Run Project` button (F6).
+5. The program should run. Look at the console and you can login using Employee or Payroll Staff account.
+
+&nbsp;
+
+**B. Running via COMMAND PROMPT:**
+1. Make sure you have git and java installed in your device. Open your Command Prompt and enter `git clone https://github.com/harrymg-mmdc/MO-IT101-Group20.git`
+2. The project will be downloaded on your device. Input this in the Command Prompt: `cd ~/MO-IT101-Group20/` and hit enter. 
+3. Afterwards, input this in the Command Prompt: `javac -d . src/main/java/com/milestone2group20/Milestone2group20.java` and hit enter.
+4. Finally to run the program, enter this in the Command Prompt: `java com.milestone2group20.Milestone2group20`
+5. The program should run. Look at the terminal and you can login using Employee or Payroll Staff account.
+
+
+<br>
+
+## [ [PROJECT PLAN LINK](https://docs.google.com/spreadsheets/d/1NJKSsgbyVyR2Pja8zfwnQdsonT4iYbKpyGxvoQpk0oM/edit?usp=sharing) ]
