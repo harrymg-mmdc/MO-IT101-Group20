@@ -70,7 +70,7 @@ public class MOIT101Group20Milestone2 {
         if (!(userName.equals("employee") || userName.equals("payroll_staff")) || !passWord.equals("12345")) {
  
             System.out.println("Incorrect username and/or password.");
-            return; // Exit the program if login fails.
+            return; // Display error message if username or password is incorrect
         }
  
         // Proceed to the correct menu based on role.
@@ -321,11 +321,11 @@ public class MOIT101Group20Milestone2 {
         String[] months =
                 {"June", "July", "August", "September", "October", "November", "December"};
  
-        System.out.println("\n==============================");
+        System.out.println("\n=======================================");
         System.out.println("Employee Number: " + id);
         System.out.println("Employee Name: " + employee[0]);
         System.out.println("Employee Birthday: " + employee[1]);
-        System.out.println("==============================");
+        System.out.println("=======================================");
  
         // Loop through each month (0 = June, 6 = December).
         for (int m = 0; m < 7; m++) {
@@ -379,7 +379,7 @@ public class MOIT101Group20Milestone2 {
             System.out.println("  > Tax: " + withholdTax);
             System.out.println("Total Deductions: " + totalDeduction);
             System.out.println("Net Salary 2: " + net2);
-            System.out.println("\n=======================================================================");
+            System.out.println("\n=======================================");
         }
     }
  
@@ -437,29 +437,62 @@ public class MOIT101Group20Milestone2 {
  
     // This method computes the Pag-IBIG contribution (from MotorPH Matrix).
     static double computePagibig(double gross) {
- 
-        // Use 1% if salary is ₱1,500 or below, otherwise use 2%.
-        double rate = (gross <= 1500) ? 0.01 : 0.02;
- 
-        double contrib = gross * rate;
- 
-        // Cap the contribution at ₱100 max.
-        if (contrib > 100) contrib = 100;
- 
-        return contrib;
+
+        // Determine the employee contribution rate
+        // If salary is 1,500 or below → 1% contribution
+        // If salary is above 1,500 → 2% contribution
+        double employeeRate = (gross <= 1500) ? 0.01 : 0.02;
+
+        // Compute the employee share based on the salary and rate
+        double employeeShare = gross * employeeRate;
+
+        // Pag-IBIG has a maximum employee contribution of PHP 100
+        // because the total contribution cap is PHP 200
+        // (split equally between employee and employer)
+        if (employeeShare > 100) {
+            employeeShare = 100;
+        }
+
+        // Return the employee's Pag-IBIG contribution
+        return employeeShare;
     }
  
     // This method computes the PhilHealth employee premium (from MotorPH matrix).
-    static double computePhilHealth(double gross) {
- 
-        // If salary is ₱10,000 or below, the employee share is fixed at ₱150.
-        if (gross <= 10000) return 150;
- 
-        // If salary is between ₱10,001 and ₱90,000, compute 3% then divide by 2.
-        if (gross <= 90000) return (gross * 0.03) / 2;
- 
-        // If salary is above ₱90,000, the maximum employee share is ₱2,250.
-        return 2250;
+    static double computePhilHealth(double monthlyGross) {
+
+        // PhilHealth premium rate (3% of monthly salary for 2024)
+        double premiumRate = 0;
+
+        // Minimum salary floor used for PhilHealth computation
+        double minSalary = 10000;
+
+        // Maximum salary ceiling used for PhilHealth computation
+        double maxSalary = 60000;
+
+        // ===== Apply salary floor and ceiling rules =====
+
+        // If salary is below the minimum salary floor
+        // Use the minimum rate for contribution calculation
+        if (monthlyGross < minSalary) premiumRate = .03;
+
+            // If salary is between the minimum and maximum salary limits
+            // Apply the same 3% premium rate
+        else if (monthlyGross < maxSalary && monthlyGross > minSalary) {
+            premiumRate = .03;
+
+            // If salary exceeds the maximum salary ceiling
+            // The same rate applies but contribution is based on the ceiling
+        } else if (monthlyGross > maxSalary) {
+            premiumRate = .03;
+        }
+
+        // Compute the total PhilHealth premium
+        // Premium = monthly salary × premium rate
+        double totalPremium = monthlyGross * premiumRate;
+
+        // Return only the employee share (50% of the total premium)
+        // because the employer pays the other half
+        return totalPremium / 2;
     }
  
     // This method computes the withholding tax based on taxable income.
