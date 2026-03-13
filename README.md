@@ -37,7 +37,7 @@ To run the program, you can either choose any of the following:
 
 **B. Running via COMMAND PROMPT:**
 1. Make sure you have git and java installed in your device. Open your Command Prompt and enter `git clone https://github.com/harrymg-mmdc/MO-IT101-Group20.git`
-2. The project will be downloaded on your device. Input this in the Command Prompt: `cd ~/MO-IT101-Group20/` and hit enter. 
+2. The project will be downloaded on your device. Input this in the Command Prompt: `cd MO-IT101-Group20/` hit enter. 
 3. Afterwards, input this in the Command Prompt: `javac -d . src/main/java/com/milestone2group20/Milestone2group20.java` and hit enter.
 4. Finally to run the program, enter this in the Command Prompt: `java com.milestone2group20.Milestone2group20`
 5. The program should run. Look at the terminal and you can login using Employee or Payroll Staff account.
