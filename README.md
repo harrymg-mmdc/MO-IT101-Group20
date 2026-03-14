@@ -7,10 +7,10 @@
 
 | Member Name | Contributions |
 | :--- | :---: | 
-| Karl Aparece | Create intial project, Update Project Plan, Updated Use Case Diagram based on Mentor/IT Coach feedback | 
-| Rina Mae Falculan | Create intial project, Update Project Plan, Provided external resources/references |
-| Harry Gertos | Created Github repository, Create intial project, Update Project Plan, Updated README.md |
-| Lady Mae Tapere | Create intial project, Updated Wireframe based on Mentor/IT Coach feedback |
+| Karl Aparece | Create intial project, Create methods of main computeSSS computePhilhealth, Updated Use Case Diagram based on Mentor/IT Coach feedback, Create   | 
+| Rina Mae Falculan | Create intial project, Create methods of loadEmployees loadAttendance displayPayroll, Provided external resources/references |
+| Harry Gertos | Created Github repository, Create intial project, Create methods of loginSystem employeeMenu payrollMenu, Update Project Plan, Updated README.md |
+| Lady Mae Tapere | Create intial project, Create methods of computeHours computeTax computePagibig, Updated Wireframe based on Mentor/IT Coach feedback |
 
 
 <br>
