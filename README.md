@@ -7,7 +7,7 @@
 
 | Member Name | Contributions |
 | :--- | :--- | 
-| Karl Aparece | • Create initial project<br>• Create `main`, `computeSSS`, `computePhilhealth` methods<br>• Updated Use Case Diagram based on Mentor/IT Coach feedback<br>• Update Project Plan   | 
+| Karl Franklyn Aparece | • Create initial project<br>• Create `main`, `computeSSS`, `computePhilhealth` methods<br>• Updated Use Case Diagram based on Mentor/IT Coach feedback<br>• Update Project Plan   | 
 | Rina Mae Falculan | • Create initial project<br>• Create `loadEmployees`, `loadAttendance`, `displayPayroll` methods<br>• Provided external resources/references |
 | Harry Gertos | • Created & Updated Github repository<br>• Create initial project<br>• Create `loginSystem`, `employeeMenu`, `payrollMenu` methods<br>• Updated README.md |
 | Lady Mae Tapere | • Create initial project<br>• Create `computeHours`, `computeTax`, `computePagibig` methods<br>• Updated Wireframe based on Mentor/IT Coach feedback |
