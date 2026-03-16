@@ -6,11 +6,11 @@
 ## [ TEAM DETAILS ]
 
 | Member Name | Contributions |
-| :--- | :---: | 
-| Karl Aparece | Create intial project, Create methods of main computeSSS computePhilhealth, Updated Use Case Diagram based on Mentor/IT Coach feedback   | 
-| Rina Mae Falculan | Create intial project, Create methods of loadEmployees loadAttendance displayPayroll, Provided external resources/references |
-| Harry Gertos | Created Github repository, Create intial project, Create methods of loginSystem employeeMenu payrollMenu, Update Project Plan, Updated README.md |
-| Lady Mae Tapere | Create intial project, Create methods of computeHours computeTax computePagibig, Updated Wireframe based on Mentor/IT Coach feedback |
+| :--- | :--- | 
+| Karl Aparece | • Create intial project<br>• Create methods of `main`, `computeSSS`, `computePhilhealth`<br>• Updated Use Case Diagram based on Mentor/IT Coach feedback<br>• Update Project Plan   | 
+| Rina Mae Falculan | • Create intial project<br>• Create methods of `loadEmployees`, `loadAttendance`, `displayPayroll`<br>• Provided external resources/references |
+| Harry Gertos | • Created & Updated Github repository<br>• Create intial project<br>• Create methods of `loginSystem`, `employeeMenu`, `payrollMenu`<br>• Updated README.md |
+| Lady Mae Tapere | • Create intial project<br>• Create methods of `computeHours`, `computeTax`, `computePagibig`<br>• Updated Wireframe based on Mentor/IT Coach feedback |
 
 
 <br>
@@ -21,11 +21,11 @@
 The program is a simple payroll system that is designed for 2 users: An **Employee** and a **Payroll Staff**. Both users will require authentication in order to use the program. Employee User can view their details by entering their Employee Number while Payroll Staff User can either process a payroll of an Employee or process all Employees by entering the Employee Number. The program is easy to use and instructions are provided for each use case. The table below shows how the program works:
 
 | User | Credentials (username/password) | Use Case | Outcome |
-| :--- | :---: | :---: | :---: |
-| Employee | employee/12345  | View Employee Details | Displays Employee Details: (1) Employee Number, (2) Employee Name and (3) Employee Birthday). |
+| :--- | :--- | :--- | :--- |
+| Employee | employee/12345  | View Employee Details | Displays Employee Details: <br>• Employee Number <br>• Employee Name<br>• Employee Birthday. |
 |          |                 | Exit Program          | Closes or Exits the Program. |
-| Payroll Staff | payroll_staff/12345 | Process Payroll of ONE Employee | Displays Employee Payroll Details in Semi-Monthly format (2 Cutoffs). Displays the following information in order: (1) Employee Number, (2) Employee Name, (3) Employee Birthday, (4) Cutoff 1 - Total Hours Worked, (5) Cutoff 1 - Gross Salary, (6) Cutoff 1 - Net Salary, (7) Cutoff 2 - Total Hours Worked, (8) Cutoff 2 - Gross Salary, (9) Cutoff 2 SSS, PhilHealth, Pag-IBIG and Tax deductions, (10) Cutoff 2 - Total Deductions, (11) Cutoff 2 - Net Salary |
-|               |                     | Procees Payroll of ALL Employees | Displays ALL Employees Payroll Details in Semi-Monthly format (2 Cutoffs). Displays the following information in order: (1) Employee Number, (2) Employee Name, (3) Employee Birthday, (4) Cutoff 1 - Total Hours Worked, (5) Cutoff 1 - Gross Salary, (6) Cutoff 1 - Net Salary, (7) Cutoff 2 - Total Hours Worked, (8) Cutoff 2 - Gross Salary, (9) Cutoff 2 SSS, PhilHealth, Pag-IBIG and Tax deductions, (10) Cutoff 2 - Total Deductions, (11) Cutoff 2 - Net Salary |
+| Payroll Staff | payroll_staff/12345 | Process Payroll of ONE Employee | Displays Employee Payroll Details in Semi-Monthly format (2 Cutoffs). Displays the following information in order: <br>• Employee Number<br>• Employee Name<br>• Employee Birthday<br>• Cutoff 1 - Total Hours Worked<br>• Cutoff 1 - Gross Salary<br>• Cutoff 1 - Net Salary<br>• Cutoff 2 - Total Hours Worked<br>• Cutoff 2 - Gross Salary<br>• Cutoff 2 - SSS, PhilHealth, Pag-IBIG and Tax deductions<br>• Cutoff 2 - Total Deductions<br>• Cutoff 2 - Net Salary |
+|               |                     | Procees Payroll of ALL Employees | Displays ALL Employees Payroll Details in Semi-Monthly format (2 Cutoffs). Displays the following information in order:<br>• Employee Number<br>• Employee Name<br>• Employee Birthday<br>• Cutoff 1 - Total Hours Worked<br>• Cutoff 1 - Gross Salary<br>• Cutoff 1 - Net Salary<br>• Cutoff 2 - Total Hours Worked<br>• Cutoff 2 - Gross Salary<br>• Cutoff 2 - SSS, PhilHealth, Pag-IBIG and Tax deductions<br>• Cutoff 2 - Total Deductions<br>• Cutoff 2 - Net Salary |
 |               |                     | Exit Program | Closes or Exits the Program. |
 
 <br>
