@@ -18,7 +18,15 @@
 
 ## [ PROGRAM DETAILS ]
 
-The program is a simple payroll system that is designed for 2 users: An **Employee** and a **Payroll Staff**. Both users will require authentication in order to use the program. Employee User can view their details while Payroll Staff User can either process a payroll of an Employee or process all Employees. The program is easy to use and instructions are provided for each action.
+The program is a simple payroll system that is designed for 2 users: An **Employee** and a **Payroll Staff**. Both users will require authentication in order to use the program. Employee User can view their details by entering their Employee Number while Payroll Staff User can either process a payroll of an Employee or process all Employees by entering the Employee Number. The program is easy to use and instructions are provided for each action. The table below shows how the program works:
+
+| User | Credentials (username/password) | Action/Use Case | Outcome |
+| :--- | :---: | :---: | :---: |
+| Employee | employee/12345  | View Employee Details | Displays Employee Details: (1) Employee Number, (2) Employee Name and (3) Employee Birthday). |
+|          |                 | Exit Program          | Closes or Exists the Program. |
+| Payroll Staff | payroll_staff/12345 | Process Payroll of ONE Employee | Displays Employee Payroll Details in Semi-Monthly format (2 Cutoffs). Dispalys the following information in order: (1) Employee Number, (2) Employee Name, (3) Employee Birthday, (4) Cutoff 1 - Total Hours Worked, (5) Cutoff 1 - Gross Salary, (6) Cutoff 1 - Net Salary, (7) Cutoff 2 - Total Hours Worked, (8) Cutoff 2 - Gross Salary, (9) Cutoff 2 SSS, PhilHealth, Pag-IBIG and Tax deductions, (10) Cutoff 2 - Total Deductions, (11) Cutoff 2 - Net Salary |
+|               |                     | Procees Payroll of ALL Employees | Displays ALL Employees Payroll Details in Semi-Monthly format (2 Cutoffs). Displays the following information in order: (1) Employee Number, (2) Employee Name, (3) Employee Birthday, (4) Cutoff 1 - Total Hours Worked, (5) Cutoff 1 - Gross Salary, (6) Cutoff 1 - Net Salary, (7) Cutoff 2 - Total Hours Worked, (8) Cutoff 2 - Gross Salary, (9) Cutoff 2 SSS, PhilHealth, Pag-IBIG and Tax deductions, (10) Cutoff 2 - Total Deductions, (11) Cutoff 2 - Net Salary |
+|               |                     | Exit Program | Closes or Exists the Program. |
 
 <br>
 
