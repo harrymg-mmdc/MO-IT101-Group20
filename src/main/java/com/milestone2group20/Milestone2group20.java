@@ -215,7 +215,7 @@ public class Milestone2group20 {
             return 0; // Return 0 if there's any error parsing the time.
         }
     }
-    /**
+    /** ================= INPUT VALIDATION =================
      * Reads and validates menu input.
      * Ensures the user enters a valid numeric choice within range.
      *
