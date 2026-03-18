@@ -94,22 +94,27 @@ public class Milestone2group20 {
 
         try (BufferedReader br = new BufferedReader(new FileReader(EMPLOYEE_FILE))) {
 
-            br.readLine();
+            br.readLine(); // Skip the header row/first line of the CSV.
             String line;
 
+            // Read the file line by line.
             while ((line = br.readLine()) != null) {
 
+                // Using regex for parsing CSV (ignoring commas in quotes).
                 String[] f = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
+                 // Get the employee number, name, and birthday from the column in CSV file.
                 String employeeId = f[0].trim();
-                String employeeName = f[2].trim() + " " + f[1].trim();
+                String employeeName = f[2].trim() + " " + f[1].trim(); // First name + Last name.
                 String employeeBirthday = f[3].trim();
 
+                // Hourly rate is in column 18 (from 0-18), remove quotes and commas to get the number.
                 String hourly = f[18]
                         .replace("\"", "")
                         .replace(",", "")
                         .trim();
 
+                // Store the employee info in the map with their ID as the key.
                 employees.put(employeeId, new String[]{employeeName, employeeBirthday, hourly});
 
                 // Initialize dynamic YearMonth storage
@@ -129,15 +134,17 @@ public class Milestone2group20 {
 
         try (BufferedReader br = new BufferedReader(new FileReader(ATTENDANCE_FILE))) {
 
-            br.readLine();
+            br.readLine(); // Skip the header row
             String line;
 
             while ((line = br.readLine()) != null) {
 
+                // Same regex in loadEmployees method.
                 String[] f = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
                 String employeeId = f[0].trim();
 
+                // Skip this row if the employee is not in our employee list.
                 if (!employees.containsKey(employeeId)) continue;
 
                 // Parse date MM/DD/YYYY */
@@ -226,15 +233,27 @@ public class Milestone2group20 {
     static int getValidatedChoice(int min, int max) {
 
         while (true) {
+            // Prompt user for input
             System.out.print("Choice: ");
+             // Read input as String to safely handle invalid entries (example: letters)
             String input = scanner.nextLine();
 
             try {
+                /**
+                 * Attempt to convert input into an integer.
+                 * If input is not numeric, this will throw NumberFormatException.
+                 */
                 int choice = Integer.parseInt(input);
 
+                // Check if the input is within the allowed range.
                 if (choice >= min && choice <= max) {
+                     // Valid input → return the value
                     return choice;
                 } else {
+                    /**
+                     * Input is numeric but outside valid range.
+                     * Inform the user and loop again.
+                     */
                     System.out.println("Invalid choice. Please select between " + min + " and " + max + ".");
                 }
 
@@ -306,7 +325,9 @@ public class Milestone2group20 {
 
             int choice = getValidatedChoice(1, 3);
 
-            if (choice == 1) {// Process payroll for a single employee.
+            if (choice == 1) {
+                
+                // Process payroll for a single employee.
                 System.out.print("Employee Number: ");
                 String id = scanner.nextLine();
 
@@ -315,7 +336,9 @@ public class Milestone2group20 {
                 } else {
                     displayPayroll(id);
                 }
-            } else if (choice == 2) {// Loop through all employees and display their payroll.
+            } else if (choice == 2) {
+                
+                // Loop through all employees and display their payroll.
                 for (String id : employees.keySet()) {
 
                     displayPayroll(id);
