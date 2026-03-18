@@ -233,9 +233,10 @@ public class Milestone2group20 {
     static int getValidatedChoice(int min, int max) {
 
         while (true) {
-            // Prompt user for input
-            System.out.print("Choice: ");
-             // Read input as String to safely handle invalid entries (example: letters)
+            /**
+            *Prompt user for input
+            * Read input as String to safely handle invalid entries (example: letters)
+            */
             String input = scanner.nextLine();
 
             try {
