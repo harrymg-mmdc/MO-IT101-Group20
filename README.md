@@ -30,7 +30,7 @@ The program is a simple payroll system that is designed for 2 users: An **Employ
 
 <br>
 
-## [HOW TO RUN THE PROGRAM]
+## [ HOW TO RUN THE PROGRAM ]
 
 To run the program, you can either choose any of the following:
 
@@ -57,7 +57,7 @@ To run the program, you can either choose any of the following:
 
 <br>
 
-## [CHANGELOG]
+## [ CHANGELOG ]
 
 **Milestone 2 Revision for TERMINAL ASSESSMENT (March 19, 2026)**
     <br>• Program now supports all months and years instead of only June–December 2024 *(based on feedback)*.
