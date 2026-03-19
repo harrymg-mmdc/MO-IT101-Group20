@@ -432,7 +432,7 @@ public class Milestone2group20 {
             System.out.println("  > Tax: " + tax);
 
             System.out.println("Total Deduction: " + totalDeduction);
-            System.out.println("Net Salary: " + (gross1 + net2));
+            System.out.println("Net Salary: " + net2);
 
             System.out.println("=======================================");
         }
