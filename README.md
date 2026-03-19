@@ -1,5 +1,5 @@
 # MotorPH Payroll System - MO-IT101 | H1101 | Group 20
-**Milestone 2** for IT101 - Computer Programming 1
+**MILESTONE 2** & **TERMINAL ASSESSMENT** for IT101 - Computer Programming 1
 
 <br>
 
@@ -7,10 +7,10 @@
 
 | Member Name | Contributions |
 | :--- | :--- | 
-| Karl Franklyn Aparece | • Create initial project<br>• Create `main`, `computeSSS`, `computePhilhealth` methods<br>• Updated Use Case Diagram based on Mentor/IT Coach feedback<br>• Update Project Plan   | 
-| Rina Mae Falculan | • Create initial project<br>• Create `loadEmployees`, `loadAttendance`, `displayPayroll` methods<br>• Provided external resources/references |
-| Harry Gertos | • Created & Updated Github repository<br>• Create initial project<br>• Create `loginSystem`, `employeeMenu`, `payrollMenu` methods<br>• Updated README.md |
-| Lady Mae Tapere | • Create initial project<br>• Create `computeHours`, `computeTax`, `computePagibig` methods<br>• Updated Wireframe based on Mentor/IT Coach feedback |
+| Karl Franklyn Aparece | • Create initial project<br>• Create `main`, `computeSSS`, `computePhilhealth` methods<br>• Updated Use Case Diagram based on Mentor/IT Coach feedback<br>• Update Project Plan<br>• Applied changes for TA submission based on IT Coach feedback | 
+| Rina Mae Falculan | • Create initial project<br>• Create `loadEmployees`, `loadAttendance`, `displayPayroll` methods<br>• Provided external resources/references<br>• Reviewed changes for TA submission based on IT Coach feedback |
+| Harry Gertos | • Created & Updated Github repository<br>• Create initial project<br>• Create `loginSystem`, `employeeMenu`, `payrollMenu` methods<br>• Updated README.md<br>• Applied changes for TA submission based on IT Coach feedback |
+| Lady Mae Tapere | • Create initial project<br>• Create `computeHours`, `computeTax`, `computePagibig` methods<br>• Updated Wireframe based on Mentor/IT Coach feedback<br>• Reviewed changes for TA submission based on IT Coach feedback |
 
 
 <br>
@@ -54,3 +54,16 @@ To run the program, you can either choose any of the following:
 <br>
 
 ## [ [PROJECT PLAN LINK](https://docs.google.com/spreadsheets/d/1NJKSsgbyVyR2Pja8zfwnQdsonT4iYbKpyGxvoQpk0oM/edit?usp=sharing) ]
+
+<br>
+
+## [CHANGELOG]
+
+**Milestone 2 Revision for TERMINAL ASSESSMENT (March 19, 2026)**
+    <br>• Program now supports all months and years instead of only June–December 2024 *(based on feedback)*.
+    <br>• Comments fixed based on JavaDoc commenting format *(based on feedback)*.
+    <br>• Added Input Validation measures *(based on feedback)*.
+    <br>• Reviewed & Finalized for Terminal Assessment submission.
+
+**Milestone 2 - Initial Submission (March 16, 2026)**
+    <br>• Reviewed & Finalized for Milestone 2 submission.
