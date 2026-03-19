@@ -256,10 +256,12 @@ public class Milestone2group20 {
                      * Inform the user and loop again.
                      */
                     System.out.println("Invalid choice. Please select between " + min + " and " + max + ".");
+                    System.out.print("\nChoice: ");
                 }
 
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");
+                System.out.print("\nChoice: ");
             }
         }
     }
