@@ -59,11 +59,11 @@ To run the program, you can either choose any of the following:
 
 ## [ CHANGELOG ]
 
-**Milestone 2 Revision for TERMINAL ASSESSMENT (March 19, 2026)**
+**03/19/2026 --- Milestone 2 Revision for TERMINAL ASSESSMENT**
     <br>• Program now supports all months and years instead of only June–December 2024 *(based on feedback)*.
     <br>• Comments fixed based on JavaDoc commenting format *(based on feedback)*.
     <br>• Added Input Validation measures *(based on feedback)*.
     <br>• Reviewed & Finalized for Terminal Assessment submission.
 
-**Milestone 2 - Initial Submission (March 16, 2026)**
+**03/16/2026 --- Milestone 2 - Initial Submission**
     <br>• Reviewed & Finalized for Milestone 2 submission.
