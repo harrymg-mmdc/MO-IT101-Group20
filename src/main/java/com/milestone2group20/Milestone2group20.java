@@ -423,13 +423,13 @@ public class Milestone2group20 {
             // Display/print the variables for Cutoff 1.
             System.out.println("\n========== " + monthName + " " + year + " ==========");
 
-            System.out.println("Cutoff Date: " + monthName + " 1 to " + monthName + " 15");
+            System.out.println("\nCutoff 1 - Date: " + monthName + " 1 to " + monthName + " 15");
             System.out.println("Total Hours Worked: " + firstCutoff);
             System.out.println("Gross Salary: " + gross1);
             System.out.println("Net Salary: " + gross1);
 
             // Display/print the variables for Cutoff 2.
-            System.out.println("Cutoff Date: " + monthName + " 16 to " + monthName + " " + lastDay);
+            System.out.println("\nCutoff 2 - Date: " + monthName + " 16 to " + monthName + " " + lastDay);
             System.out.println("Total Hours Worked: " + secondCutoff);
             System.out.println("Gross Salary: " + gross2);
 
@@ -442,7 +442,7 @@ public class Milestone2group20 {
             System.out.println("Total Deduction: " + totalDeduction);
             System.out.println("Net Salary: " + net2);
 
-            System.out.println("=======================================");
+            System.out.println("\n=======================================");
         }
     }
 
