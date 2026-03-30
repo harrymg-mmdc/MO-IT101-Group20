@@ -316,11 +316,25 @@ public class Milestone2group20 {
      * This menu is shown when payroll staff logs in.
      */
     static void payrollMenu() {
-
-        // Same loop with employeeMenu method.
         while (true) {
-
             System.out.println("\n========[ Payroll Staff Menu ]========");
+            System.out.println("\n1. Process Payroll");
+            System.out.println("2. Exit");
+            System.out.print("\nChoice: ");
+
+            int choice = getValidatedChoice(1, 2);
+
+            if (choice == 1) {
+                processPayrollSubMenu(); // Goes to the sub-menu
+            } else if (choice == 2) {
+                return;
+            }
+        }
+    }
+
+    static void processPayrollSubMenu() {
+        while (true) {
+            System.out.println("\n========[ Process Payroll ]========");
             System.out.println("\n1. Process ONE Employee");
             System.out.println("2. Process ALL Employees");
             System.out.println("3. Exit");
@@ -329,29 +343,22 @@ public class Milestone2group20 {
             int choice = getValidatedChoice(1, 3);
 
             if (choice == 1) {
-                
-                // Process payroll for a single employee.
                 System.out.print("Employee Number: ");
                 String id = scanner.nextLine();
-
                 if (!employees.containsKey(id)) {
                     System.out.println("Employee number does not exist.");
                 } else {
                     displayPayroll(id);
                 }
+                return; // Return after processing
             } else if (choice == 2) {
-                
-                // Loop through all employees and display their payroll.
                 for (String id : employees.keySet()) {
-
                     displayPayroll(id);
-
                     System.out.println("----------------------------------");
                 }
+                return; // Return after processing
             } else if (choice == 3) {
-                return; // Exit the menu.
-            } else {
-                System.out.println("Wrong choice. Please try again.");
+                return;
             }
         }
     }
@@ -403,7 +410,6 @@ public class Milestone2group20 {
 
             // Taxable income = monthly gross minus the three government contributions.
             double taxable = monthlyGross - sss - pagibig - philhealth;
-            double tax = computeTax(taxable);
 
             // Calculate withholding tax based on the taxable income.
             double withholdTax = computeTax(taxable);
@@ -417,26 +423,26 @@ public class Milestone2group20 {
             // Display/print the variables for Cutoff 1.
             System.out.println("\n========== " + monthName + " " + year + " ==========");
 
-            System.out.println("CUTOFF 1 (1–15)");
-            System.out.println("Total Hours: " + firstCutoff);
+            System.out.println("\nCutoff 1 - Date: " + monthName + " 1 to " + monthName + " 15");
+            System.out.println("Total Hours Worked: " + firstCutoff);
             System.out.println("Gross Salary: " + gross1);
             System.out.println("Net Salary: " + gross1);
 
             // Display/print the variables for Cutoff 2.
-            System.out.println("\nCUTOFF 2 (16–" + lastDay + ")");
-            System.out.println("Total Hours: " + secondCutoff);
+            System.out.println("\nCutoff 2 - Date: " + monthName + " 16 to " + monthName + " " + lastDay);
+            System.out.println("Total Hours Worked: " + secondCutoff);
             System.out.println("Gross Salary: " + gross2);
 
             System.out.println("Deductions:");
             System.out.println("  > SSS: " + sss);
             System.out.println("  > PhilHealth: " + philhealth);
             System.out.println("  > Pag-IBIG: " + pagibig);
-            System.out.println("  > Tax: " + tax);
+            System.out.println("  > Tax: " + withholdTax);
 
             System.out.println("Total Deduction: " + totalDeduction);
             System.out.println("Net Salary: " + net2);
 
-            System.out.println("=======================================");
+            System.out.println("\n=======================================");
         }
     }
 
@@ -517,42 +523,11 @@ public class Milestone2group20 {
 
     // This method computes the PhilHealth employee premium (from MotorPH matrix).
     static double computePhilHealth(double monthlyGross) {
-
-        // PhilHealth premium rate (3% of monthly salary for 2024)
-        double premiumRate = 0;
-
-        // Minimum salary floor used for PhilHealth computation
-        double minSalary = 10000;
-
-        // Maximum salary ceiling used for PhilHealth computation
-        double maxSalary = 60000;
-
-        // ===== Apply salary floor and ceiling rules =====
-
-        // If salary is below the minimum salary floor
-        // Use the minimum rate for contribution calculation
-        if (monthlyGross < minSalary) premiumRate = .03;
-
-            // If salary is between the minimum and maximum salary limits
-            // Apply the same 3% premium rate
-        else if (monthlyGross < maxSalary && monthlyGross > minSalary) {
-            premiumRate = .03;
-
-            // If salary exceeds the maximum salary ceiling
-            // The same rate applies but contribution is based on the ceiling
-        } else if (monthlyGross > maxSalary) {
-            premiumRate = .03;
-        }
-
-        // Compute the total PhilHealth premium
-        // Premium = monthly salary × premium rate
+        double premiumRate = 0.03;
         double totalPremium = monthlyGross * premiumRate;
-
-        // Return only the employee share (50% of the total premium)
-        // because the employer pays the other half
         return totalPremium / 2;
     }
-
+    
     // This method computes the withholding tax based on taxable income.
     static double computeTax(double taxable) {
 
